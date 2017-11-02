@@ -10,7 +10,7 @@ const app = new Koa()
 
 options(app)
 develop(app)
-statics(app)  
 routes(app)
+statics(app)
 sessions(app)
 listen(app)

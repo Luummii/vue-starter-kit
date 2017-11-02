@@ -1,5 +1,6 @@
 import statics from 'koa-static-server'
+import path from 'path'
 
-export default (app) => {
-  app.use(statics({ rootDir: 'dist', rootPath: '/dist', index: 'index.html'}))   
+export default (app) => { 
+  app.use(statics({ rootDir: 'dist' }))
 }
