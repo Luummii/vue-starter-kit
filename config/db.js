@@ -15,10 +15,10 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
-  db.host = 'ec2-46-51-187-253.eu-west-1.compute.amazonaws.com'
-  db.database = 'd1fku5melgbgot'
-  db.user = 'vdxuairepiuzcm'
-  db.password = '233c31e355c82fff1bc0b0b54e7d6b74eaf561819a73467148411f1bce3f0a37'  
+  db.host = 'ec2-54-247-124-9.eu-west-1.compute.amazonaws.com'
+  db.database = 'd5v4a8bdv8saqr'
+  db.user = 'hchhlnusfeycow'
+  db.password = 'e165d4d18c7d2247f6343758651454c175485de6c237a05fb2f915dc1470d208'  
   db.port = 5432  
 }
 
