@@ -1,0 +1,10 @@
+node_modules/
+dist/
+npm-debug.log*
+package-lock.json*
+
+# Editor directories and files
+.vscode
+
+# heroku db
+server/controllers/config/heroku.dev.js
