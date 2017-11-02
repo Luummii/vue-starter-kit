@@ -1,5 +1,7 @@
 {
-  "ignore": /node_modules\/(?!(koa-bodyparser)\/).*/,
   "presets": ["env", "stage-0", "node6"],
-  "plugins": ["transform-async-to-generator"]
+  "plugins": [
+    "transform-class-properties",
+    "transform-async-to-generator"
+  ]
 } 
