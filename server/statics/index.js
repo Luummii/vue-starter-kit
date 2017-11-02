@@ -1,5 +1,5 @@
-import serve from 'koa-static'
+import statics from 'koa-static'
 
 export default (app) => {
-  app.use(serve(__dirname + '/dist'))   
+  app.use(statics(__dirname + '/dist'))   
 }
