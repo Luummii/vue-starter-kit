@@ -1,17 +1,21 @@
 <template lang="html">
-  <div id="app">    
-    <top-menu></top-menu>
+  <div id="app"> 
+    <div class="top">
+      <img class="logo" src="./assets/img/logo.png">
+      <p>Vue-starter-kit - the template for fast start your app.</p> 
+      <app-menu></app-menu>
+    </div>      
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import TopMenu from './components/TopMenu.vue'
+import AppMenu from './components/AppMenu.vue'
 
 export default {
   name: 'app',
   components: {
-    TopMenu
+    AppMenu
   }
 }
 </script>
@@ -28,4 +32,17 @@ export default {
 body
   font-family Ubuntu-Bold
   font-size 30px
+
+.top
+  position relative
+  background-color #E3E1E9
+  height 340px
+
+.logo
+  width 200px
+  height 200px
+  display block
+  margin 0 auto
+p 
+  text-align center
 </style>

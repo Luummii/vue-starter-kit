@@ -1,4 +1,5 @@
-import db from '../../config/knex'
+import db from '../../db/db'
+import dbs from '../../config/knex'
 
 const user = {
   Select: async (userID) => {

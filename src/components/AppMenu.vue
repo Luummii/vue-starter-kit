@@ -19,6 +19,8 @@ export default {
 <style lang="stylus" scoped>
 nav
   background-color #C6C2D3
+  font-size 20px
+  text-align center
 
 li
   display inline-block

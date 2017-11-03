@@ -7,10 +7,12 @@ import webpackConfig from '../../build/webpack.dev.conf'
 export default (app) => {
   if (process.env.NODE_ENV === 'development') {
     const compiler = webpack(webpackConfig)
+
     app.use(convert(webpackMiddleware(compiler, {
       publicPath: webpackConfig.output.publicPath,
       noInfo: true
     })))
+    
     app.use(convert(webpackHotMiddleware(compiler, { 
       log: false 
     })))

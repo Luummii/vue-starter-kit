@@ -1,8 +1,9 @@
 import KnexStore from 'koa-generic-session-knex'
+import db from '../db/db'
 import knex from './knex'
 
 const sessionConfig = {
-  store: new KnexStore(knex, {}),  
+  store: new KnexStore(db, {}),  
   key: 'sess',
   maxAge: 600000,
   overwrite: true,

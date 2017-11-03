@@ -1,11 +1,15 @@
 import axios from 'axios'
 
 const state = {
-  user: null
+  user: {
+    message: 'There will be a response from the server'
+  }
 }
 
 const mutations = {
-
+  SET_USER: function(state, data) {
+    state.user.message = data.message
+  }
 }
 
 const actions = {
@@ -14,7 +18,7 @@ const actions = {
     axios.post('/api/auth', {
       email, password
     }).then((res) => {
-      console.log('res.data = ', res.data)
+      commit('SET_USER', res.data)
     }).catch((err) => {
       console.log(err)
     })
@@ -22,7 +26,9 @@ const actions = {
 }
 
 const getters = {
-
+  user: state => {
+    return state.user 
+  }
 }
 
 export default {
