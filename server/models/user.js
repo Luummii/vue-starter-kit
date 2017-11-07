@@ -1,12 +1,11 @@
 import db from '../../db/db'
-import dbs from '../../config/knex'
 
 const user = {
   Select: async (userID) => {
-    return db.select('userName').from('users').where({ user_id: userID })
+    return db.select('user_name').from('users').where({ user_id: userID })
   },
   Insert: async (userName) => {    
-    return db('users').insert({ userName: userName }).returning('user_id')
+    return db('users').insert({ user_name: userName }).returning('user_id')
   }  
 }
 
