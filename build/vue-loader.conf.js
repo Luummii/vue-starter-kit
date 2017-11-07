@@ -1,9 +1,10 @@
-var utils = require('./utils')
-var config = require('../config/build')
-var isProduction = process.env.NODE_ENV === 'production'
+'use strict'
+import { cssLoaders } from './utils'
 
-module.exports = {
-  loaders: utils.cssLoaders({
+const isProduction = process.env.NODE_ENV === 'production'
+
+export default {
+  loaders: cssLoaders({
     sourceMap: isProduction,
     extract: isProduction
   })

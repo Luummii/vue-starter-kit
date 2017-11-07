@@ -1,7 +1,8 @@
-const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+'use strict'
+import path from 'path'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
-exports.cssLoaders = function (options) {
+const cssLoaders = (options) => {
   options = options || {}
 
   let cssLoader = {
@@ -12,9 +13,8 @@ exports.cssLoaders = function (options) {
     }
   }
 
-  function generateLoaders (loader) {
+  const generateLoaders = (loader) => {
     let loaders = [cssLoader]
-
     if (loader) {
       loaders.push({
         loader: loader,
@@ -23,7 +23,6 @@ exports.cssLoaders = function (options) {
         }
       })
     }
-
     if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
@@ -33,7 +32,6 @@ exports.cssLoaders = function (options) {
       return ['style-loader'].concat(loaders)
     }
   }
-
   return {
     css: generateLoaders(),
     styl: generateLoaders('stylus-loader'),
@@ -41,17 +39,17 @@ exports.cssLoaders = function (options) {
   }
 }
 
-exports.styleLoaders = function (options) {
+const styleLoaders = (options) => {
   const output = []
-  const loaders = exports.cssLoaders(options)
-
+  const loaders = cssLoaders(options)
   for (const extension in loaders) {
     const loader = loaders[extension]
     output.push({
       test: new RegExp('\\.' + extension + '$'),
       use: loader
     })
-  }
-  
+  }  
   return output
 }
+
+export { cssLoaders, styleLoaders }

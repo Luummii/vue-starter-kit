@@ -1,19 +1,19 @@
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-const CompressionPlugin = require('compression-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const merge = require('webpack-merge')
-const utils = require('./utils')
-const config = require('../config/build')
-const baseConf = require('./webpack.base.conf')
+import webpack from 'webpack'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import ProgressBarPlugin from 'progress-bar-webpack-plugin'
+import CompressionPlugin from 'compression-webpack-plugin'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import OptimizeCSSPlugin from 'optimize-css-assets-webpack-plugin'
+import merge from 'webpack-merge'
+import { styleLoaders } from './utils'
+import config from '../config/build'
+import baseConf from './webpack.base.conf'
 
 const env = config.prod.env
 
-module.exports = merge(baseConf, {
+export default merge(baseConf, {
   module: {
-    rules: utils.styleLoaders({ 
+    rules: styleLoaders({ 
       sourceMap: true,
       extract: true
     })

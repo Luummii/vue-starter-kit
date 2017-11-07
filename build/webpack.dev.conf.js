@@ -1,20 +1,20 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-const merge = require('webpack-merge')
+import path from 'path'
+import webpack from 'webpack'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import FriendlyErrorsPlugin from 'friendly-errors-webpack-plugin'
+import merge from 'webpack-merge'
 
-const utils = require('./utils')
-const config = require('../config/build')
-const baseConf = require('./webpack.base.conf')
+import { styleLoaders } from './utils'
+import config from '../config/build'
+import baseConf from './webpack.base.conf'
 
 const env = config.dev.env
 const host = config.dev.host
 const port = config.dev.port
 
-module.exports = merge(baseConf, {
+export default merge(baseConf, {
   module: {
-    rules: utils.styleLoaders({ sourceMap: false })
+    rules: styleLoaders({ sourceMap: false })
   },
   devtool: '#cheap-module-eval-source-map',
   plugins: [
@@ -30,7 +30,7 @@ module.exports = merge(baseConf, {
     new FriendlyErrorsPlugin({
       compilationSuccessInfo: {
         messages: ['You appication is running here http://localhost:5000'],
-        notes: ['Your application start development']
+        notes: ['Process go:']
       },
       clearConsole: true
     }),

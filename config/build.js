@@ -1,7 +1,7 @@
 'use strict'
-const path = require('path')
+import path from 'path'
 
-module.exports = {
+export default {
   prod:{
     env: {
       NODE_ENV: JSON.stringify('production')

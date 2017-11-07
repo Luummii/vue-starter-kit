@@ -1,15 +1,15 @@
 require('babel-register')
 
-const db = require( '../config/db').default
+const dbconnect = require( '../config/dbconnect').default
 
 module.exports = {
   client: 'pg',  
   connection: {
-    user: db.user,
-    password: db.password,
-    host: db.host,
-    port: db.port,
-    database: db.database,
+    user: dbconnect.user,
+    password: dbconnect.password,
+    host: dbconnect.host,
+    port: dbconnect.port,
+    database: dbconnect.database,
     ssl: true,
     max: 100
   },
@@ -18,5 +18,3 @@ module.exports = {
     max: 10
   }
 }
-
-// knex.migrate.latest([knexConfig])

@@ -1,8 +1,9 @@
-const path = require('path')
-const config = require('../config/build')
-const vueLoaderConf = require('./vue-loader.conf')
+'use strict'
+import path from 'path'
+import config from '../config/build'
+import vueLoaderConf from './vue-loader.conf'
 
-module.exports =  {
+export default {
   entry: {
     app: path.join(__dirname, '..', 'src/app.js')
   },
