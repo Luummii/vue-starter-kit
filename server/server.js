@@ -40,4 +40,7 @@ app.use(router.routes())
 statics(app)
 csrf(app)
 
-app.listen(port) 
+// For testing
+export default app.listen(port) 
+
+

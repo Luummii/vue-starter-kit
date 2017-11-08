@@ -12,8 +12,10 @@ Migrate
 PostgreSQL (Heroku)
 Koa middlewares (bodyParser, csrf, sessions and more)
 Server routes
+Jasmine
+Chai
 
-example on heroku here - 
+fast example here - https://vuejs.starterkit.fun/
 
 ## Build Setup
 
