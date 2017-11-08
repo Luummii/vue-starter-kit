@@ -1,6 +1,7 @@
 'use strict'
 
 import Koa from 'koa'
+import Router from 'koa-router'
 
 import favicon from './middlewares/favicon'
 import statics from './middlewares/statics'
@@ -12,10 +13,14 @@ import helmet from './middlewares/helmet'
 import develop from './middlewares/develop'
 import history from './middlewares/history'
 import csrf from './middlewares/csrf'
-import routes from './routes'
+
+// routes
+import auth from './routes/auth'
 
 const app = new Koa()
 const port = process.env.PORT || 5000
+
+const router = new Router()
 
 favicon(app)
 logger(app)
@@ -23,10 +28,15 @@ errors(app)
 bodyParser(app)
 history(app)
 develop(app)
-helmet(app) // to consider
 sessions(app)
-routes(app)
-csrf(app)
+helmet(app)
+// routes
+router.post('/api/auth', auth)
+
+app.use(router.routes())
+   .use(router.allowedMethods())
+
 statics(app)
+csrf(app)
 
 app.listen(port) 
