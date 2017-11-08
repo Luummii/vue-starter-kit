@@ -1,6 +1,20 @@
 # vue-starter-kit
 Vue-starter-kit - the template for fast start your app.
 
+VueJS
+KoaJS
+Selectel server (https://selectel.ru/)
+Roter
+Store
+Axios
+Knex
+Migrate
+PostgreSQL (Heroku)
+Koa middlewares (bodyParser, csrf, sessions and more)
+Server routes
+
+example on heroku here - 
+
 ## Build Setup
 
 ``` bash

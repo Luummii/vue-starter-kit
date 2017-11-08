@@ -2,10 +2,12 @@ import db from '../../db/db'
 
 const user = {
   Select: async () => {
-    return db.select('user_name').from('users')
+    const result = await db.select('email').from('users').where({ user_id: 2 })
+    return result
   },
-  Insert: async (userName) => {    
-    return db('users').insert({ user_name: userName }).returning('user_id')
+  Insert: async (email) => {    
+    const result = await db('users').insert({ email: email }).returning('user_id')
+    return result
   }  
 }
 

@@ -14,7 +14,6 @@ const mutations = {
 
 const actions = {
   auth ({ commit }, { email, password }) {
-    console.log(email, password)
     axios.post('/api/auth', {
       email, password
     }).then((res) => {
