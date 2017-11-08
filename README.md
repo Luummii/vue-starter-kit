@@ -17,6 +17,7 @@ Vue-starter-kit - the template for fast start your app.
  - Server routes
  - Jasmine
  - Chai
+ - PM2
 
 fast example here - https://vuejs.starterkit.fun/
 
