@@ -19,7 +19,7 @@ Vue-starter-kit - the template for fast start your app.
  - Chai
  - PM2
 
-fast example here - https://vuejs.starterkit.fun/
+fast example here - https://vue-starter-kit.herokuapp.com/
 
 ## Build Setup
 
