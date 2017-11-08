@@ -8,7 +8,7 @@
     "dev": "nodemon --config nodemon.json --watch server --exec node server/index.js",
     "start": "node server/index.js",
     "build": "node build/build.js",
-    "test": "node spec/run.js"
+    "test": "node spec/index.js"
   },
   "repository": {
     "type": "git",
