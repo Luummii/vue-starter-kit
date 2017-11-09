@@ -1,15 +1,15 @@
 require('babel-register')
 
-const dbconnect = require( '../config/dbconnect').default
+const connect = require('../config/connect').default
 
 module.exports = {
-  client: 'pg',  
+  client: connect.db.client,  
   connection: {
-    user: dbconnect.user,
-    password: dbconnect.password,
-    host: dbconnect.host,
-    port: dbconnect.port,
-    database: dbconnect.database,
+    user: connect.db.user,
+    password: connect.db.password,
+    host: connect.db.host,
+    port: connect.db.port,
+    database: connect.db.database,
     ssl: true,
     max: 100
   },

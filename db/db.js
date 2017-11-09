@@ -1,4 +1,4 @@
 import knex from 'knex'
-import knexConfig from './knexfile'
+import knexfile from './knexfile'
 
-export default knex(knexConfig)
+export default knex(knexfile)
