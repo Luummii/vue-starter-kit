@@ -19,7 +19,6 @@ import auth from './routes/auth'
 
 const app = new Koa()
 const port = process.env.PORT || 5000
-
 const router = new Router()
 
 favicon(app)
