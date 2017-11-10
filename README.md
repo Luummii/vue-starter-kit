@@ -2,6 +2,8 @@
 
 Vue-starter-kit - the template for fast start your app.
 
+[![Build Status](https://travis-ci.org/Luummii/vue-starter-kit.svg?branch=master)](https://travis-ci.org/Luummii/vue-starter-kit)
+
  - VueJS
  - KoaJS
  - Selectel server (https://selectel.ru/)
