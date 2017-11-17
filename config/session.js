@@ -1,4 +1,3 @@
-'use strict'
 import KnexStore from 'koa-generic-session-knex'
 import db from '../db/db'
 

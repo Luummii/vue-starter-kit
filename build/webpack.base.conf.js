@@ -1,4 +1,3 @@
-'use strict'
 import path from 'path'
 import config from '../config/build'
 import vueLoaderConf from './vue-loader.conf'

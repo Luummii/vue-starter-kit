@@ -1,4 +1,3 @@
-'use strict'
 import { cssLoaders } from './utils'
 
 const isProduction = process.env.NODE_ENV === 'production'

@@ -1,4 +1,3 @@
-'use strict'
 import url from 'url'
 
 const env = process.env.NODE_ENV === 'production'

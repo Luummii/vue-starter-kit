@@ -1,4 +1,3 @@
-'use strict'
 import Router from 'koa-router'
 
 import auth from './auth'

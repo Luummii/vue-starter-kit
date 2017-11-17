@@ -1,4 +1,3 @@
-'use strict'
 import favicon from './favicon'
 import statics from './statics'
 import logger from './logger'
