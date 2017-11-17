@@ -1,13 +1,13 @@
 import path from 'path'
 
 export default {
-  prod:{
+  prod: {
     env: {
       NODE_ENV: JSON.stringify('production')
     },
     assetsRoot: path.join(__dirname, '..', 'dist'),
     assetsPublicPath: '/',
-    stylePath: 'css/styles.css',    
+    stylePath: 'css/styles.css',
     productionGzipExtensions: ['js', 'css']
   },
   dev: {

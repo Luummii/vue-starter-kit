@@ -10,14 +10,15 @@ import history from './history'
 import csrf from './csrf'
 
 export default [
-  favicon, 
-  logger, 
-  errors, 
-  bodyParser, 
-  history, 
-  develop, 
-  sessions, 
-  helmet, 
-  history, 
+  favicon,
+  logger,
+  errors,
+  bodyParser,
+  history,
+  develop,
+  sessions,
+  helmet,
+  history,
+  statics,
   csrf
 ]

@@ -3,7 +3,7 @@ require('babel-register')
 const connect = require('../config/connect').default
 
 module.exports = {
-  client: connect.db.client,  
+  client: connect.db.client,
   connection: {
     user: connect.db.user,
     password: connect.db.password,

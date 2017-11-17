@@ -13,7 +13,7 @@ const env = config.prod.env
 
 export default merge(baseConf, {
   module: {
-    rules: styleLoaders({ 
+    rules: styleLoaders({
       sourceMap: true,
       extract: true
     })
@@ -59,7 +59,7 @@ export default merge(baseConf, {
         loops: true,
         unused: true,
         warnings: false,
-        drop_console: true,
+        drop_console: true, // eslint-disable-line
         unsafe: true
       },
       sourceMap: true

@@ -7,7 +7,7 @@ const state = {
 }
 
 const mutations = {
-  SET_USER: function(state, data) {
+  SET_USER: function (state, data) {
     state.user.message = data.message
   }
 }
@@ -26,7 +26,7 @@ const actions = {
 
 const getters = {
   user: state => {
-    return state.user 
+    return state.user
   }
 }
 

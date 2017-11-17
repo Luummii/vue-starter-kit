@@ -1,10 +1,9 @@
-import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 const cssLoaders = (options) => {
   options = options || {}
 
-  let cssLoader = {
+  const cssLoader = {
     loader: 'css-loader',
     options: {
       minimize: options.extract,
@@ -13,7 +12,7 @@ const cssLoaders = (options) => {
   }
 
   const generateLoaders = (loader) => {
-    let loaders = [cssLoader]
+    const loaders = [cssLoader]
     if (loader) {
       loaders.push({
         loader: loader,
@@ -47,7 +46,7 @@ const styleLoaders = (options) => {
       test: new RegExp('\\.' + extension + '$'),
       use: loader
     })
-  }  
+  }
   return output
 }
 

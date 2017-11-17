@@ -9,8 +9,6 @@ import config from '../config/build'
 import baseConf from './webpack.base.conf'
 
 const env = config.dev.env
-const host = config.dev.host
-const port = config.dev.port
 
 export default merge(baseConf, {
   module: {

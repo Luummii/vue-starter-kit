@@ -2,8 +2,7 @@ import KnexStore from 'koa-generic-session-knex'
 import db from '../db/db'
 
 export default {
-  store: new KnexStore(db, {}),  
-  key: 'sess',
+  store: new KnexStore(db, {}),
   maxAge: 600000,
   overwrite: true,
   httpOnly: true,
