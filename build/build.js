@@ -24,5 +24,4 @@ webpack(prodConfig, function (err, stats) {
 
   console.log('\n')
   console.log(chalk.green('>>>'), chalk.blue('Build complete!'))
-  console.log(chalk.red('>>>'), chalk.yellow('Very important information!'), '\n')
 })

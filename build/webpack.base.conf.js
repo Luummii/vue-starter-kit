@@ -1,5 +1,5 @@
 import path from 'path'
-import config from '../config/build'
+import config from './config'
 import vueLoaderConf from './vue-loader.conf'
 
 export default {
@@ -7,13 +7,9 @@ export default {
     app: path.join(__dirname, '..', 'src/app.js')
   },
   output: {
-    path: process.env.NODE_ENV === 'production'
-    ? config.prod.assetsRoot
-    : config.dev.assetsRoot,
+    path: config.assetsRoot,
     filename: 'js/[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-    ? config.prod.assetsPublicPath
-    : config.dev.assetsPublicPath
+    publicPath: config.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -23,7 +19,7 @@ export default {
     }
   },
   module: {
-    rules: [ 
+    rules: [
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -33,7 +29,7 @@ export default {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [path.join(__dirname, '..', 'src')]
-      },     
+      },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',

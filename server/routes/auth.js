@@ -14,5 +14,5 @@ export default async (ctx, next) => {
   }
   const id = uuid.v4()
   if (!ctx.session.uid) ctx.session.uid = id
-  ctx.body = JSON.stringify({ message: 'User email: ' + result[0].email })
+  ctx.body = JSON.stringify({ message: `User email: ${result[0].email}` })
 }

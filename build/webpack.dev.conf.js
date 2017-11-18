@@ -5,7 +5,7 @@ import FriendlyErrorsPlugin from 'friendly-errors-webpack-plugin'
 import merge from 'webpack-merge'
 
 import { styleLoaders } from './utils'
-import config from '../config/build'
+import config from './config'
 import baseConf from './webpack.base.conf'
 
 const env = config.dev.env
@@ -21,7 +21,7 @@ export default merge(baseConf, {
       filename: 'index.html',
       template: 'index.html',
       inject: true
-    }),      
+    }),
     new webpack.WatchIgnorePlugin([
       path.join(__dirname, 'node_modules')
     ]),
@@ -32,7 +32,7 @@ export default merge(baseConf, {
       },
       clearConsole: true
     }),
-    new webpack.NoEmitOnErrorsPlugin(),    
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env': env
     }),

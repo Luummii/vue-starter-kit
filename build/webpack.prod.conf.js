@@ -6,7 +6,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import OptimizeCSSPlugin from 'optimize-css-assets-webpack-plugin'
 import merge from 'webpack-merge'
 import { styleLoaders } from './utils'
-import config from '../config/build'
+import config from './config'
 import baseConf from './webpack.base.conf'
 
 const env = config.prod.env

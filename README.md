@@ -6,7 +6,6 @@ Vue-starter-kit - the template for fast start your app.
 
  - VueJS
  - KoaJS
- - Selectel server (https://selectel.ru/)
  - Roter
  - Store
  - Axios
@@ -17,7 +16,6 @@ Vue-starter-kit - the template for fast start your app.
  - Server routes
  - Jasmine
  - Chai
- - PM2
 
 fast example here - https://vue-starter-kit.herokuapp.com/
 

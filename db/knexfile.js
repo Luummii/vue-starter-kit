@@ -1,6 +1,6 @@
 require('babel-register')
 
-const connect = require('../config/connect').default
+const connect = require('./connect').default
 
 module.exports = {
   client: connect.db.client,
