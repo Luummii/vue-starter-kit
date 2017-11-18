@@ -8,6 +8,7 @@ import helmet from './helmet'
 import develop from './develop'
 import history from './history'
 import csrf from './csrf'
+import routes from '../routes/'
 
 export default [
   favicon,
@@ -19,6 +20,7 @@ export default [
   sessions,
   helmet,
   history,
+  routes,
   statics,
   csrf
 ]
