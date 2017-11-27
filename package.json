@@ -8,6 +8,7 @@
     "dev": "nodemon --config nodemon.json --watch server --exec node server/index.js",
     "start": "node server/index.js",
     "build": "node build/build.js",
+    "pm2": "pm2 start ecosystem.config.js",
     "test": "node spec/index.js"
   },
   "repository": {
