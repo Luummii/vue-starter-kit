@@ -15,7 +15,6 @@ export default [
   logger,
   errors,
   bodyParser,
-  history,
   develop,
   sessions,
   helmet,
