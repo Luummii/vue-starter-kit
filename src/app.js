@@ -6,6 +6,12 @@ import App from './App.vue'
 import routes from './routes'
 import store from './store/index'
 
+if (process.env.NODE_ENV === 'production') {
+  Vue.config.devtools = false
+  Vue.config.debug = false
+  Vue.config.silent = true
+}
+
 // For use routers
 Vue.use(VueRouter)
 export const router = new VueRouter({
