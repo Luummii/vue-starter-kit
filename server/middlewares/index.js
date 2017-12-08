@@ -15,10 +15,10 @@ export default [
   logger,
   errors,
   bodyParser,
+  history,
   develop,
   sessions,
   helmet,
-  history,
   routes,
   statics,
   csrf
