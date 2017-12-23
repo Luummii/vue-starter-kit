@@ -7,7 +7,7 @@ const app = new Koa()
 
 middlewares.forEach((middleware) => middleware(app))
 
-winston.warn(`Server is listening port ${configServer.port}`)
+winston.log(`info`, `Server is listening port ${configServer.port}`)
 
 // For testing
 export default app.listen(configServer.port)

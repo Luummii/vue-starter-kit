@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import { sync } from 'vuex-router-sync'
 
 import App from './App.vue'
-import routes from './routes'
+import router from './routes'
 import store from './store/index'
 
 if (process.env.NODE_ENV === 'production') {
@@ -14,10 +14,6 @@ if (process.env.NODE_ENV === 'production') {
 
 // For use routers
 Vue.use(VueRouter)
-export const router = new VueRouter({
-  mode: 'history',
-  routes
-})
 
 sync(store, router)
 
