@@ -26,13 +26,13 @@ li
   display inline-block
   color #E3E2EA
 
-li:nth-child(even)
+&:nth-child(even)
   margin 10px
 
-li:hover
+&:hover
   color black
   cursor pointer 
 
-nav li.router-link-active 
+&.router-link-active 
   color black
 </style>
