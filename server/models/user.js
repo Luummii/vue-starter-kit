@@ -1,4 +1,4 @@
-import db from '../../db/db'
+import db from '../db'
 
 const user = {
   Select: async () => {

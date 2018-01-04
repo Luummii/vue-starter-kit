@@ -1,5 +1,5 @@
 import KnexStore from 'koa-generic-session-knex'
-import db from '../db/db'
+import db from '../server/db'
 
 export default {
   store: new KnexStore(db, {}),
